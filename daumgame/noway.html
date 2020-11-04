@@ -1,0 +1,1617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Daum 게임</title>
+    <link rel="shortcut icon" href="https://www.daum.net/favicon.ico">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-2.2.3.min.js"></script>
+    <script type="text/javascript" src="jQuery_slide.js"></script>
+    <script>
+        var files = ["https://t1.kakaocdn.net/gamepub/daumgame/banner/banner/gametop_banner_1556762346977_1.jpg",
+                    "https://t1.kakaocdn.net/gamepub/daumgame/banner/banner/gametop_banner_1555912702435_56.jpg",
+                    "https://t1.kakaocdn.net/gamepub/daumgame/banner/banner/gametop_banner_1556517819398_82.jpg"
+                    ];
+        var imgs = new Array();
+        for(var i = 0; i <files.length; i++) {
+            imgs[i] = new Image();
+            imgs[i].src = files[i];
+        }
+        var next = 0;
+        function change(img) {
+            var b;
+            b = document.getElementById("battle");
+            img = b;
+            next++;
+            next %= imgs.length;
+            img.src = imgs[next].src;
+        }
+         function change2(img) {
+            b = document.getElementById("battle");
+            img = b;
+            if (next == 0) next = imgs.length-1;
+            next--;
+            img.src = imgs[next].src;
+
+            <!--if (next == 0) next = imgs.length-1;-->
+        }
+        var p;
+        var b;
+
+        function init(){
+            p=document.getElementById("pcgame_page");
+            b=document.getElementById("banner_img");
+
+            p.onmouseout=out;
+            p.onmouseover=over;
+            b.onmouseout=out;
+            }
+
+        function out(){
+            p.style.display='none';
+            b.style.display='none';
+            }
+
+        function over(){
+            p.style.display='inline-block';
+            }
+
+
+    </script>
+
+</head>
+<body onload="init()">
+<div id="head-navi">
+    <div class="inner-head">
+        <strong class="logo">
+            <a href="https://www.daum.net/" class="link-logo"><span class="img-ggb ico-daum">Daum</span></a>
+            <a href="http://game.daum.net" class="link-gamelogo"><span class="img-ggb ico-service">게임</span></a>
+        </strong>
+        <div class="game-block">
+            <ul class="game-menu">
+                <li>
+                    <a class="link-ggb link-pc"id="pcgame" ><strong class="color">PC게임</strong><span
+                            class="img-ggb ico-new">NEW</span></a>
+
+                    <div class="game-sub" id="pcgame_page" >
+                    <div class="group-sort" >
+                        <div class="box-sort">
+                            <strong class="tit-game">MMORPG</strong>
+                            <ul class="list-game">
+                                <li><a href="https://pathofexile.game.daum.net?t__nil_gamecate_ggb=rpg&amp;nil_id=59" class="link-game">패스 오브 엑자일<span class="img-ggb tag-new">NEW</span></a></li><!-- 2019-05-30 수정 -->
+                                <li><a href="https://air.game.daum.net?utm_source=daumgame&amp;utm_medium=display&amp;utm_campaign=201904-09_game_list&amp;utm_content=game_list&amp;t__nil_gamecate_ggb=rpg&amp;nil_id=45" class="link-game">A:IR<span class="img-ggb tag-cbt">CBT</span></a></li><!-- 2019-05-15 추가 -->
+                                <li><a href="http://black.daum.net?utm_source=daumgame&amp;utm_medium=display&amp;utm_campaign=201704-20_game_list&amp;utm_content=game_list&amp;t__nil_gamecate_ggb=rpg&amp;nil_id=1" class="link-game">검은사막</a></li>
+                                <li><a href="http://eos.daum.net?utm_source=daumgame&amp;utm_medium=display&amp;utm_campaign=201704-20_game_list&amp;utm_content=game_list&amp;t__nil_gamecate_ggb=rpg&amp;nil_id=41" class="link-game">에오스</a></li>
+                                <li><a href="http://rfonline.daum.net?t__nil_gamecate_ggb=rpg&amp;nil_id=18" class="link-game">RF온라인</a></li>
+                                <li><a href="http://game.daum.net/cn/mulegend?t__nil_gamecate_ggb=rpg&amp;nil_id=41" class="link-game">뮤레전드</a></li>
+                                <li><a href="http://game.daum.net/cn/rohan?t__nil_gamecate_ggb=rpg&amp;nil_id=32" class="link-game">로한</a></li>
+                                <li><a href="http://game.daum.net/cn/cabal?t__nil_gamecate_ggb=rpg&amp;nil_id=23" class="link-game">카발온라인</a></li>
+                                <li><a href="http://game.daum.net/cn/icarus?t__nil_gamecate_ggb=rpg&amp;nil_id=38" class="link-game">이카루스</a></li>
+                                <li><a href="http://game.daum.net/cn/cabal2?t__nil_gamecate_ggb=rpg&amp;nil_id=14" class="link-game">카발2</a></li>
+                                <li><a href="http://game.daum.net/cn/ff14?t__nil_gamecate_ggb=rpg&amp;nil_id=42" class="link-game">파이널판타지14</a></li>
+                                <li><a href="http://game.daum.net/cn/e3?t__nil_gamecate_ggb=rpg&amp;nil_id=20" class="link-game">이터널시티3</a></li>
+                                <li><a href="http://game.daum.net/cn/dho?t__nil_gamecate_ggb=rpg&amp;nil_id=35" class="link-game">대항해시대</a></li>
+                                <li><a href="http://game.daum.net/cn/at?t__nil_gamecate_ggb=rpg&amp;nil_id=13" class="link-game">아틀란티카</a></li>
+                                <li><a href="http://game.daum.net/cn/lodosswar?t__nil_gamecate_ggb=rpg&amp;nil_id=3" class="link-game">로도스도전기온라인</a></li>
+                                <li><a href="http://game.daum.net/cn/fox?t__nil_gamecate_ggb=rpg&amp;nil_id=39" class="link-game">천년호</a></li>
+                                <li><a href="http://game.daum.net/cn/dk?t__nil_gamecate_ggb=rpg&amp;nil_id=11" class="link-game">DK온라인</a></li><!-- 2018-11-29 추가 -->
+                            </ul>
+                        </div><!-- // MMORPG -->
+                    </div>
+
+                    <div class="group-sort">
+                        <div class="box-sort">
+                            <strong class="tit-game">FPS/슈팅</strong>
+                            <ul class="list-game">
+                                <li><a href="http://pubg.game.daum.net?t__nil_gamecate_ggb=casual&amp;nil_id=3" class="link-game">배틀그라운드</a></li>
+                                <li><a href="http://game.daum.net/cn/ava?t__nil_gamecate_ggb=casual&amp;nil_id=15" class="link-game">A.V.A</a></li>
+                            </ul>
+                        </div><!-- // FPS/슈팅 -->
+
+                        <div class="box-sort">
+                            <strong class="tit-game">캐주얼</strong>
+                            <ul class="list-game">
+                                <li><a href="http://game.daum.net/cn/tr?t__nil_gamecate_ggb=casual&amp;nil_id=3" class="link-game">테일즈런너</a></li>
+                                <li><a href="http://game.daum.net/cn/lovebeat?t__nil_gamecate_ggb=casual&amp;nil_id=4" class="link-game">러브비트</a></li>
+                                <li><a href="http://game.daum.net/cn/audition?t__nil_gamecate_ggb=casual&amp;nil_id=21" class="link-game">오디션</a></li>
+                                <li><a href="http://game.daum.net/cn/lostsaga?t__nil_gamecate_ggb=casual&amp;nil_id=16" class="link-game">로스트사가</a></li>
+                                <li><a href="http://game.daum.net/pm/picturesearch?t__nil_gamecate_ggb=board&amp;nil_id=7" class="link-game">틀린그림찾기</a></li>
+                                <li><a href="http://gamepack.game.daum.net/?t__nil_gamecate_ggb=board&amp;nil_id=2" class="link-game">게임팩</a></li>
+                                <li><a href="http://game.daum.net/cn/nx2?t__nil_gamecate_ggb=casual&amp;nil_id=5" class="link-game">능력자X</a></li>
+                                <li><a href="http://game.daum.net/cn/gf?t__nil_gamecate_ggb=casual&amp;nil_id=6" class="link-game">젬파이터</a></li>
+                            </ul>
+                        </div><!-- // 캐주얼 -->
+                    </div>
+
+                    <div class="group-sort">
+                        <div class="box-sort">
+                            <strong class="tit-game">스포츠</strong>
+                            <ul class="list-game">
+                                <li><a href="http://game.daum.net/cn/slugger?t__nil_gamecate_ggb=sports&amp;nil_id=10" class="link-game">슬러거</a></li>
+                                <li><a href="http://shotonline.game.daum.net/?t__nil_gamecate_ggb=sports&amp;nil_id=9" class="link-game">샷온라인</a></li>
+                            </ul>
+                        </div><!-- // 스포츠 -->
+
+                        <div class="box-sort">
+                            <strong class="tit-game">웹RPG</strong>
+                            <ul class="list-game">
+                                <li><a href="http://game.daum.net/cn/gb?t__nil_gamecate_ggb=web&amp;nil_id=105" class="link-game">귀검</a></li><!-- 2018-12-20 추가 -->
+                                <li><a href="http://game.daum.net/cn/ygw?t__nil_gamecate_ggb=web&amp;nil_id=83" class="link-game">열혈강호외전</a></li>
+                                <li><a href="http://game.daum.net/cn/kg?t__nil_gamecate_ggb=web&amp;nil_id=96" class="link-game">군주의검</a></li>
+                            </ul>
+                        </div><!-- // 웹RPG -->
+                    </div>
+
+                    <div class="group-sort">
+                        <div class="box-sort">
+                            <strong class="tit-game">웹RPG</strong>
+                            <ul class="list-game">
+                                <li><a href="http://game.daum.net/cn/gods?t__nil_gamecate_ggb=web&amp;nil_id=101" class="link-game">신들의전쟁:인페르노</a></li>
+                                <li><a href="http://game.daum.net/cn/mutempest?t__nil_gamecate_ggb=web&amp;nil_id=102" class="link-game">뮤템페스트</a></li>
+                                <li><a href="http://game.daum.net/cn/muignition?t__nil_gamecate_ggb=web&amp;nil_id=91" class="link-game">뮤이그니션</a></li>
+                                <li><a href="http://game.daum.net/cn/ys?t__nil_gamecate_ggb=web&amp;nil_id=104" class="link-game">용의군단</a></li>
+                                <li><a href="http://game.daum.net/cn/naruto?t__nil_gamecate_ggb=web&amp;nil_id=99" class="link-game">나루토온라인</a></li>
+                                <li><a href="http://game.daum.net/cn/queen?t__nil_gamecate_ggb=web&amp;nil_id=100" class="link-game">여황제</a></li>
+                                <li><a href="http://game.daum.net/cn/jo?t__nil_gamecate_ggb=web&amp;nil_id=98" class="link-game">신조자룡</a></li>
+                                <li><a href="http://game.daum.net/cn/ah?t__nil_gamecate_ggb=web&amp;nil_id=102" class="link-game">암흑전설</a></li>
+                            </ul>
+                        </div><!-- // 웹RPG -->
+                    </div>
+
+                    <div class="group-sort">
+                        <div class="box-sort">
+                            <strong class="tit-game">웹전략</strong>
+                            <ul class="list-game">
+                                <li><a href="http://game.daum.net/cn/1033?t__nil_gamecate_ggb=web&amp;nil_id=98" class="link-game">열혈삼국3</a></li>
+                                <li><a href="http://game.daum.net/cn/tka?t__nil_gamecate_ggb=web&amp;nil_id=1" class="link-game">삼국야망</a></li>
+                                <li><a href="http://game.daum.net/cn/3p?t__nil_gamecate_ggb=web&amp;nil_id=62" class="link-game">삼국지를품다</a></li>
+                                <li><a href="http://game.daum.net/cn/wa?t__nil_gamecate_ggb=web&amp;nil_id=51" class="link-game">와룡전설</a></li>
+                            </ul>
+                        </div><!-- // 웹전략 -->
+
+                        <div class="box-sort">
+                            <strong class="tit-game">고스톱/포커</strong>
+                            <ul class="list-game">
+                                <li><a href="http://game.daum.net/pm/newmatgo?t__nil_gamecate_ggb=gostop&amp;nil_id=1" class="link-game">뉴맞고</a></li><!-- 2018-12-03 추가 -->
+                                <li><a href="http://game.daum.net/pm/gostop?t__nil_gamecate_ggb=gostop&amp;nil_id=2" class="link-game">고스톱</a></li>
+                                <li><a href="http://game.daum.net/pm/matgo?t__nil_gamecate_ggb=gostop&amp;nil_id=3" class="link-game">맞고</a></li>
+                                <li><a href="http://game.daum.net/pm/sutda?t__nil_gamecate_ggb=gostop&amp;nil_id=4" class="link-game">섯다</a></li>
+                                <li><a href="http://game.daum.net/pm/7poker?t__nil_gamecate_ggb=poker&amp;nil_id=6" class="link-game">7포커</a></li>
+                                <li><a href="http://game.daum.net/pm/newpoker?t__nil_gamecate_ggb=poker&amp;nil_id=7" class="link-game">뉴포커</a></li>
+                                <li><a href="http://game.daum.net/pm/highlow?t__nil_gamecate_ggb=poker&amp;nil_id=8" class="link-game">하이로우</a></li>
+                                <li><a href="http://game.daum.net/pm/lowbaduki?t__nil_gamecate_ggb=poker&amp;nil_id=9" class="link-game">로우바둑이</a></li>
+                                <li><a href="http://game.daum.net/pm/hoola?t__nil_gamecate_ggb=poker&amp;nil_id=10" class="link-game">훌라</a></li>
+                            </ul>
+                        </div><!-- // 고스톱/포커 -->
+                    </div>
+
+                    <div class="group-sort">
+                        <div class="box-sort">
+                            <strong class="tit-game">보드게임</strong>
+                            <ul class="list-game">
+                                <li><a href="http://game.daum.net/pm/baduk?t__nil_gamecate_ggb=board&amp;nil_id=1" class="link-game">피망바둑</a></li>
+                                <li><a href="http://game.daum.net/cn/tygem?t__nil_gamecate_ggb=board&amp;nil_id=8" class="link-game">타이젬바둑</a></li>
+                                <li><a href="http://game.daum.net/pm/janggi?t__nil_gamecate_ggb=board&amp;nil_id=2" class="link-game">장기</a></li>
+                                <li><a href="http://game.daum.net/pm/omok?t__nil_gamecate_ggb=board&amp;nil_id=5" class="link-game">오목</a></li>
+                                <li><a href="http://game.daum.net/pm/shangplus?t__nil_gamecate_ggb=board&amp;nil_id=6" class="link-game">상하이플러스</a></li>
+                                <li><a href="http://game.daum.net/pm/sachunplus?t__nil_gamecate_ggb=board&amp;nil_id=3" class="link-game">사천성플러스</a></li>
+                                <li><a href="http://game.daum.net/pm/chicco?t__nil_gamecate_ggb=board&amp;nil_id=7" class="link-game">치코치코더큐브</a></li>
+                                <li><a href="http://game.daum.net/pm/rummi?t__nil_gamecate_ggb=board&amp;nil_id=4" class="link-game">루미큐브</a></li>
+                            </ul>
+                        </div><!-- // 보드게임 -->
+
+                        <div class="box-sort">
+                            <strong class="tit-game">플래시</strong>
+                            <ul class="list-game">
+                                <li><a href="http://game.daum.net/flash/gameDetail.do?gameId=315?t__nil_gamecate_ggb=flash&amp;nil_id=1" class="link-game">쌤쌤마트</a></li>
+                                <li><a href="http://game.daum.net/flash/gameDetail.do?gameId=306?t__nil_gamecate_ggb=flash&amp;nil_id=12" class="link-game">꽃놀이</a></li>
+                                <li><a href="http://game.daum.net/flash/gameDetail.do?gameId=380?t__nil_gamecate_ggb=flash&amp;nil_id=11" class="link-game">트레져런앤런</a></li>
+                            </ul>
+                            <a href="http://game.daum.net/flash/" class="link-more">
+                                <span class="img-ggb ico-more">플래시 게임 전체보기</span>
+                            </a>
+                        </div><!-- // 플래시 -->
+                    </div>
+                </div>
+                </li>
+                <li>
+                    <a href="http://game.kakao.com" target="_blank" class="link-ggb">모바일게임</a>
+                </li>
+            </ul>
+        </div>
+        <div class="game-bnr">
+            <a class="btn-bnr"id="banner">
+                <img src="https://t1.kakaocdn.net/gamepub/daumgame/gamebar/ggb/gametop_ggb_1556759634669_50.jpg"
+                     class="img-thumb" alt="카카오 PC방 배틀 신청 OPEN!">
+                <span class="img-ggb ico-arr" id="up">GGB 배너 열기/닫기</span>
+            </a>
+            <a href="http://pubg.game.daum.net/pubg/pcbattle/intro.daum?utm_source=daumgame&amp;utm_medium=display&amp;utm_campaign=201905-02_pubg_kakao_pcbang_battle&amp;utm_content=ggb_banner"
+               class="panel-bnr" target="_blank" id="banner_img"  >
+                <img src="https://t1.kakaocdn.net/gamepub/daumgame/gamebar/ggb/gametop_ggb_layer_1556759639014_14.jpg"
+                     class="img-thumb"  alt="혜택이 가득~ 카카오 PC방 배틀 신청 기간은 단 2주!">
+            </a>
+        </div>
+        <div class="user">
+            <p class="txt-greet">안녕하세요! 다음게임입니다.</p>
+            <a class="btn-login"><span class="img-ggb ico-login "id="login" ></span><span
+                    class="img-ggb txt-login ">로그인</span></a>
+        </div>
+    </div>
+</div>
+<div class="rest">
+    <div>
+        <div id="mainArticle">
+            <div class="section_promo">
+                <div class="slide_promo">
+                    <div class="nav_promo">
+                        <a class="btn_prev" onclick="change2()">
+                            <span class="img_top ico_prev" id="prev">이전</span>
+                        </a>
+                        <a class="btn_next" onclick="change()">
+                            <span class="img_top ico_next" id="next" onclick =change() style = "cursor:pointer;">다음</span>
+                        </a>
+                        <div class="paging_promo">
+                            <ul class="list_paging" style="width:678px" ;>
+                                <li class="on" id="num1" >
+                                    <a class="link_paging">
+                                        배틀그라운드
+                                    </a>
+                                </li>
+                                <li id="num2">
+                                    <a class="link_paging">
+                                        패스오브엑자일
+                                    </a>
+                                </li>
+                                <li id="num3">
+                                    <a class="link_paging">
+                                        프렌즈타운
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div style="max-width:100%; margin:0px auto">
+                        <div style="width: 100%; overflow: hidden; position: relative; height: ;512px">
+                            <ul class="list_promo" style="width: auto; position: relative;">
+                                <li style="float: none; list-style: none; position: absolute; width: 792px; z-index: 50; display: block;">
+                                    <a href="http://pubg.game.daum.net/pubg/pcbattle/intro.daum?utm_source=daumgame&amp;utm_medium=display&amp;utm_campaign=201905-02_pubg_kakao_pcbang_battle&amp;utm_content=main_promotion_banner" target="_blank" class="link_promo">
+                                                    <img src="https://t1.kakaocdn.net/gamepub/daumgame/banner/banner/gametop_banner_1556762346977_1.jpg" class="img_thumb" alt="배틀그라운드" id="battle">
+                                            </a>
+                                </li>
+                                <li style="float: none; list-style: none; position: absolute; width: 792px; z-index: 0; display:none;">
+                                    <a href="https://pathofexile.game.daum.net?utm_source=daumgame&amp;utm_medium=display&amp;utm_campaign=201904-24_poe_teaser&amp;utm_content=main_promotion_banner" target="_blank" class="link_promo">
+                                                    <img class="img_thumb" alt="패스오브엑자일" src="https://t1.kakaocdn.net/gamepub/daumgame/banner/banner/gametop_banner_1555912702435_56.jpg" id="exile">
+                                            </a>
+                </li>
+                            <li style="float: none; list-style: none; position: absolute; width: 792px; z-index: 0; display: none;">
+                            <a  href="https://game.kakao.com/games/2180?rtc=atb_K-DUM00P0053" target="_blank" class="link_promo">
+                        <img  class="img_thumb" alt="프렌즈타운" src="https://t1.kakaocdn.net/gamepub/daumgame/banner/banner/gametop_banner_1556517819398_82.jpg" id="friends">
+                                            </a>
+                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="bnr_promo">
+                    <a href="http://pubg.game.daum.net/pubg/pcbattle/intro.daum?utm_source=daumgame&amp;utm_medium=display&amp;utm_campaign=201905-02_pubg_kakao_pcbang_battle&amp;utm_content=game_banner"
+                       class="link_bnr" target="_blank">
+                        <img src="https://t1.kakaocdn.net/gamepub/daumgame/banner/banner/gametop_banner_1556762323913_78.jpg"
+                             class="img_thumb" alt="신청 기간 단 2주 뿐!">
+                    </a>
+                    <a href="https://game.kakao.com/games/2180?rtc=atb_K-DUM00P0053" class="link_bnr" target="_blank">
+                        <img src="https://t1.kakaocdn.net/gamepub/daumgame/banner/banner/gametop_banner_1555648229904_99.jpg"
+                             class="img_thumb" alt="프렌즈타운 OPEN">
+                    </a>
+                </div>
+            </div>
+            <div class="box_bigbnr" style="background-color:#e2ddd6">
+                <a href="https://pathofexile.game.daum.net?utm_source=daumgame&amp;utm_medium=display&amp;utm_campaign=201904-24_poe_teaser&amp;utm_content=big_banner"
+                   class="link_bnr" target="_blank">
+                    <img src="https://t1.kakaocdn.net/gamepub/daumgame/banner/content/gametop_content_1555912574619_57.jpg"
+                         class="img_thumb" alt="헤어나올 수 없는 악마의 게임 패스 오브 엑자일 한국 서비스 오픈 기념 악마의 계승자 모집 중!">
+                </a>
+            </div>
+
+            <div id="game-category" class="game-category">
+                <ul class="tab_game">
+                    <strong>
+                        <li class="focus on" style="color:#212220;">
+                            <span class="link_tab1" id="tab1" onmouseover="over2()"> <strong class="color">추천게임</strong></span>
+                            <span class="bar_tab" style="left: 0px;"></span>
+                        </li>
+                        <li>
+                            <span class="link_tab2" id="tab2" onmouseover="over1(this)">MMORPG</span>
+                        </li>
+                        <li>
+                            <span class="link_tab3" id="tab3" onmouseover="over1(this)">FPS/슈팅</span>
+                        </li>
+                        <li>
+                            <span class="link_tab4" id="tab4" onmouseover="over4(this)">캐주얼</span>
+                        </li>
+                        <li>
+                            <span class="link_tab5" id="tab5">스포츠</span>
+                        </li>
+                        <li>
+                            <span class="link_tab6" id="tab6">웹RPG</span>
+                        </li>
+                        <li>
+                            <span class="link_tab7" id="tab7">웹젼략</span>
+                        </li>
+                        <li>
+                            <span class="link_tab8" id="tab8">고스톱/포커</span>
+                        </li>
+                        <li>
+                            <span class="link_tab9" id="tab9">보드게임</span>
+                        </li>
+                        <li>
+                            <span class="link_tab10" id="tab10">플래시게임</span>
+                        </li>
+                    </strong>
+                </ul>
+
+
+                <div class="panel_game" style="display:block;">
+                    <div class="mobile-game">
+                        <ul class="sorting m_game_type">
+                            <li class="item_recomm">
+                                <a href="https://game.kakao.com/games/MQ7jNYvY" target="_blank" class="link_game">
+                                    <img src="https://t1.kakaocdn.net/gamepub/top/2018/code/game_m_1.jpg"
+                                         class="img_thumb" alt="">
+                                    <span class="frame_game">
+                            <strong class="tit_game">프렌즈레이싱<em class="img_top ico_m">[MOBILE]</em></strong>
+                            <span class="type_game">달리기</span>
+                        </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://c.singular.net/api/v1/ad?st=805827226414&amp;h=04fbc4c99cd67fc2685bf3a75ad42d0333bdb3b1"
+                                   target="_blank" class="link_game">
+                                    <img src="https://t1.kakaocdn.net/gamepub/top/2018/code/game_m_5_190114.jpg"
+                                         class="img_thumb" alt="">
+                                    <span class="frame_game">
+                            <strong class="tit_game">프렌즈대모험<em class="img_top ico_m">[MOBILE]</em></strong>
+                            <span class="type_game">캐주얼 디펜스</span>
+                        </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://lookism.kakaogame.com/?utm_campaign=launching&amp;utm_medium=pc&amp;utm_source=daum&amp;utm_content=daum_game_list&amp;utm_term=190109"
+                                   target="_blank" class="link_game">
+                                    <img src="https://t1.kakaocdn.net/gamepub/top/2018/code/game_m_6_190114.jpg"
+                                         class="img_thumb" alt="">
+                                    <span class="frame_game">
+                            <strong class="tit_game">외모지상주의<em class="img_top ico_m">[MOBILE]</em></strong>
+                            <span class="type_game">액션 RPG</span>
+                        </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://game.kakao.com/games/aybn1YyG" target="_blank" class="link_game">
+                                    <img src="https://t1.kakaocdn.net/gamepub/top/2018/code/game_m_2.jpg"
+                                         class="img_thumb" alt="">
+                                    <span class="frame_game">
+                            <strong class="tit_game">창세기전:<br>안타리아의 전쟁<em class="img_top ico_m">[MOBILE]</em></strong>
+                            <span class="type_game">전략</span>
+                        </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="pc-game">
+                        <ul class="sorting m_game_type">
+                            <li class="item_recomm">
+                                <a href="http://pubg.game.daum.net?t__nil_gamecate=casual&amp;nil_id=3"
+                                   class="link_game">
+                                    <img src="https://t1.kakaocdn.net/gamepub/top/2018/code/game_c_333.jpg"
+                                         class="img_thumb" alt="배틀그라운드">
+                                    <span class="frame_game">
+                                    <strong class="tit_game">배틀그라운드<em class="img_top ico_pc">[PC]</em></strong>
+                                    <span class="type_game">FPS/슈팅</span>
+                                </span>
+                                </a>
+                            </li>
+
+                            <li class="item_recomm">
+                                <a href="https://pathofexile.game.daum.net/preorder?t__nil_gamecate=rpg&amp;nil_id=59"
+                                   class="link_game">
+                                    <img src="https://t1.kakaocdn.net/gamepub/top/2018/code/game_c_359.jpg"
+                                         class="img_thumb" alt="패스 오브 엑자일">
+                                    <span class="frame_game">
+                                    <strong class="tit_game">패스 오브 엑자일<em class="img_top ico_pc">[PC]</em></strong>
+                                    <span class="type_game">MMORPG</span>
+                                </span>
+                                </a>
+                            </li>
+                            <li class="item_recomm">
+                                <a href="http://black.daum.net?utm_source=daumgame&amp;utm_medium=display&amp;utm_campaign=201704-20_game_list&amp;utm_content=game_list&amp;t__nil_gamecate=rpg&amp;nil_id=1"
+                                   class="link_game">
+                                    <img src="https://t1.kakaocdn.net/gamepub/top/2018/code/game_c_254.jpg"
+                                         class="img_thumb" alt="검은사막">
+                                    <span class="frame_game">
+                                    <strong class="tit_game">검은사막<em class="img_top ico_pc">[PC]</em></strong>
+                                    <span class="type_game">MMORPG</span>
+                                </span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="http://eos.daum.net?utm_source=daumgame&amp;utm_medium=display&amp;utm_campaign=201704-20_game_list&amp;utm_content=game_list&amp;t__nil_gamecate=rpg&amp;nil_id=41"
+                                   class="link_game">
+                                    <img src="https://t1.kakaocdn.net/gamepub/top/2018/code/game_w_311.jpg"
+                                         class="img_thumb" alt="에오스">
+                                    <span class="frame_game">
+                                    <strong class="tit_game">에오스<em class="img_top ico_pc">[PC]</em></strong>
+                                    <span class="type_game">MMORPG</span>
+                                </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://game.daum.net/cn/gods?t__nil_gamecate=web&amp;nil_id=101"
+                                   class="link_game">
+                                    <img src="https://t1.kakaocdn.net/gamepub/top/2018/code/game_w_332.jpg"
+                                         class="img_thumb" alt="신들의 전쟁: <br/>인페르노">
+                                    <span class="frame_game">
+                                    <strong class="tit_game">신들의 전쟁: <br>인페르노<em
+                                            class="img_top ico_pc">[PC]</em></strong>
+                                    <span class="type_game">웹RPG</span>
+                                </span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="http://rfonline.daum.net?t__nil_gamecate=rpg&amp;nil_id=18" class="link_game">
+                                    <img src="https://t1.kakaocdn.net/gamepub/top/2018/code/game_w_255.jpg"
+                                         class="img_thumb" alt="RF온라인">
+                                    <span class="frame_game">
+                                    <strong class="tit_game">RF온라인<em class="img_top ico_pc">[PC]</em></strong>
+                                    <span class="type_game">MMORPG</span>
+                                </span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="http://game.daum.net/cn/tka?t__nil_gamecate=web&amp;nil_id=1"
+                                   class="link_game">
+                                    <img src="https://t1.kakaocdn.net/gamepub/top/2018/code/game_w_184.jpg"
+                                         class="img_thumb" alt="삼국야망">
+                                    <span class="frame_game">
+                                    <strong class="tit_game">삼국야망<em class="img_top ico_pc">[PC]</em></strong>
+                                    <span class="type_game">웹전략</span>
+                                </span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="http://game.daum.net/cn/mutempest?t__nil_gamecate=web&amp;nil_id=102"
+                                   class="link_game">
+                                    <img src="https://t1.kakaocdn.net/gamepub/top/2018/code/game_w_335.jpg"
+                                         class="img_thumb" alt="뮤템페스트">
+                                    <span class="frame_game">
+                                    <strong class="tit_game">뮤템페스트<em class="img_top ico_pc">[PC]</em></strong>
+                                    <span class="type_game">웹RPG</span>
+                                </span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="http://game.daum.net/cn/ys?t__nil_gamecate=web&amp;nil_id=104"
+                                   class="link_game">
+                                    <img src="https://t1.kakaocdn.net/gamepub/top/2018/code/game_w_338.jpg"
+                                         class="img_thumb" alt="용의군단">
+                                    <span class="frame_game">
+                                    <strong class="tit_game">용의군단<em class="img_top ico_pc">[PC]</em></strong>
+                                    <span class="type_game">웹RPG</span>
+                                </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://game.daum.net/cn/tygem?t__nil_gamecate=board&amp;nil_id=8"
+                                   class="link_game">
+                                    <img src="https://t1.kakaocdn.net/gamepub/top/2018/code/game_w_136.jpg"
+                                         class="img_thumb" alt="타이젬바둑">
+                                    <span class="frame_game">
+                                    <strong class="tit_game">타이젬바둑<em class="img_top ico_pc">[PC]</em></strong>
+                                    <span class="type_game">보드게임</span>
+                                </span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="http://game.daum.net/cn/tr?t__nil_gamecate=casual&amp;nil_id=3"
+                                   class="link_game">
+                                    <img src="https://t1.kakaocdn.net/gamepub/top/2018/code/game_w_339.jpg"
+                                         class="img_thumb" alt="테일즈런너">
+                                    <span class="frame_game">
+                                    <strong class="tit_game">테일즈런너<em class="img_top ico_pc">[PC]</em></strong>
+                                    <span class="type_game">캐주얼</span>
+                                </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://game.daum.net/pm/newmatgo?t__nil_gamecate=gostop&amp;nil_id=1"
+                                   class="link_game">
+                                    <img src="https://t1.kakaocdn.net/gamepub/top/2018/code/game_w_137.jpg"
+                                         class="img_thumb" alt="뉴맞고">
+                                    <span class="frame_game">
+                                    <strong class="tit_game">뉴맞고<em class="img_top ico_pc">[PC]</em></strong>
+                                    <span class="type_game">고스톱/포커</span>
+                                </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="ETC" class="part_etc">
+                        <div class="inner_etc">
+                            <div class="notice_part">
+                                <h3 class="tit_noti">
+                                    <a href="http://bbs.pub.game.daum.net/gaia/do/notice/list?bbsId=GMN001"
+                                       class="link_tit">
+                                        <span class="img_top ico_noti"></span>
+                                        <span class="img_top txt_noti">공지사항</span>
+                                    </a>
+                                </h3>
+                                <div class="nav_noti">
+                                    <a class="img_top btn_prev">위</a>
+                                    <a class="img_top btn_next">아래</a>
+                                </div>
+                                <div class="slide_noti">
+                                    <div>
+                                        <div class="box-view">
+                                            <ul class="list_noti"
+                                                style="width: auto; position: relative; transition-duration: 0s; transform: translate3d(0px, -36px, 0px);">
+                                                <li>
+                                                    <a href="http://bbs.pub.game.daum.net/gaia/do/notice/read?articleId=216&amp;bbsId=GMN001&amp;"
+                                                       target="_blank" class="link_noti"> 5/1(수), 5/6(월) 다음게임 고객센터 휴무
+                                                        안내 </a></li>
+                                                <li style="float: none; list-style: none; position: relative; width: 351px;">
+                                                    <a href="http://bbs.pub.game.daum.net/gaia/do/notice/read?bbsId=GMN001&amp;articleId=189"
+                                                       target="_blank" class="link_noti">채널링 &lt;로한오리진&gt; 서비스 종료 안내</a>
+                                                </li>
+                                                <li style="float: none; list-style: none; position: relative; width: 351px;">
+                                                    <a href="http://bbs.pub.game.daum.net/gaia/do/notice/read?articleId=173&amp;bbsId=GMN001&amp;pageIndex=1"
+                                                       target="_blank" class="link_noti">2019년 2월 20일(수) 카카오게임즈 모바일
+                                                        게임서비스 운영정책 개정 안내</a></li>
+                                                <li style="float: none; list-style: none; position: relative; width: 351px;">
+                                                    <a href="http://bbs.pub.game.daum.net/gaia/do/notice/read?articleId=216&amp;bbsId=GMN001&amp;pageIndex=1"
+                                                       target="_blank" class="link_noti"> 5/1(수), 5/6(월) 다음게임 고객센터 휴무
+                                                        안내 </a></li>
+                                                <li style="float: none; list-style: none; position: relative; width: 351px;"
+                                                    class="bx-clone">
+                                                    <a href="http://bbs.pub.game.daum.net/gaia/do/notice/read?bbsId=GMN001&amp;articleId=189"
+                                                       target="_blank" class="link_noti">채널링 &lt;로한오리진&gt; 서비스 종료 안내</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="notice_link">
+                                <a href="/preorder/index.daum" target="_blank" class="link_reserve">
+                                    <span class="img_top ico_reserve"></span>
+                                    <span class="img_top txt_reserve">사전알림</span>
+                                    <span class="img_top ico_arr"></span>
+                                </a>
+
+                                <a href="/coupon/select/index.daum" target="_blank" class="link_coupon">
+                                    <span class="img_top ico_coupon"></span>
+                                    <span class="img_top txt_coupon">쿠폰 등록하기</span>
+                                    <span class="img_top ico_arr"></span>
+                                </a>
+
+                                <a href="/shutdown/info.daum" target="_blank" class="link_time">
+                                    <span class="img_top ico_time"></span>
+                                    <span class="img_top txt_time">게임시간 선택제</span>
+                                    <span class="img_top ico_arr"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer">
+                        <div class="list_quick">
+                            <a href="https://t1.kakaocdn.net/gamepub/policy/service.html" class="link_txt">서비스 약관/정책</a>
+                            <span class="txt_bar">|</span>
+                            <a href="http://redbell.game.daum.net/redbell/index.daum" target="_blank" class="link_txt">권리침해신고</a>
+                            <span class="txt_bar">|</span>
+                            <a href="https://t1.kakaocdn.net/gamepub/policy/youthpolicy.html" target="_blank"
+                               class="link_txt">청소년 보호정책</a>
+                            <span class="txt_bar">|</span>
+                            <a href="https://t1.kakaocdn.net/gamepub/policy/personal.html" class="link_txt emph_quick">개인정보처리방침</a>
+                            <span class="txt_bar">|</span>
+                            <a href="http://game.daum.net/security/index.daum" target="_blank" class="link_txt">보안센터</a>
+                            <span class="txt_bar">|</span>
+                            <a href="http://game.daum.net/gamehelp/" target="_blank" class="link_txt">고객센터</a>
+                            <span class="txt_bar">|</span>
+                            <a href="https://www.kakaogames.com/business/partnership" target="_blank" class="link_txt">게임제휴</a>
+                            <a href="http://www.daumpcbang.com/" target="_blank" class="link_pcroom"><span
+                                    class="img_top logo_pcroom">kakaogames PC방</span></a>
+                        </div>
+                        <div class="foot_logo">
+                            <a href="https://www.kakaogames.com/" target="_blank" class="link_games">
+                                <span class="img_top logo_games">kakaogames</span>
+                            </a>
+                        </div>
+                        <div class="foot_info">
+                            <p class="txt_info">㈜카카오게임즈는 개별 디지털콘텐츠의 통신판매중개자로 통신판매의 당사자가 아니며, 개별 콘텐츠에 대한 모든 의무와 책임은 각
+                                제공자에게 있습니다.<br>
+                                단, ㈜카카오게임즈가 직접 제공하는 콘텐츠의 경우 통신판매업자로서 책임을 부담합니다.</p>
+
+                            <div class="info_company">
+                                <span>㈜카카오게임즈 대표이사 : 남궁훈, 조계현&nbsp;</span>
+                                <span>주소 : 경기도 성남시 분당구 판교역로 152 알파돔타워 14층</span><br>
+                                <span>사업자등록번호 : 144-81-18454</span>
+                                <span>통신판매업 신고번호 : 제 2015-경기성남-0971</span>
+                                <a href="http://www.ftc.go.kr/bizCommPop.do?wrkr_no=1448118454" class="link_txt"
+                                   target="_blank">사업자 정보 확인</a><br><span>대표번호 : 1566-8834</span>
+                                <span>FAX : 031-8017-8800</span>
+                                <span>E-mail : contact@kakaogames.com (*본 메일은 수신 전용입니다)</span>
+                            </div>
+                            <small class="txt_copy">Copyright (c) <a href="http://www.kakaogames.com/" target="_blank"
+                                                                     class="link_copy">Kakao Games Corp.</a> All rights
+                                reserved.
+                            </small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
+
+<style>
+    body, div, dl, dt, dd, ul, ol, li, legend, p, th, td, input, select, button {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+        display: block;
+        background-color: #f5f5f5;
+    }
+
+    strong, b {
+        font-weight: bold;
+    }
+
+    #head-navi a {
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    a {
+        color: #333;
+        text-decoration: none;
+    }
+
+    #game-category a:hover {
+        text-decoration: underline;
+    }
+
+    #game-category .notice_link a:hover {
+        text-decoration: none;
+    }
+
+    #game-category .tit_noti a:hover {
+        text-decoration: none;
+    }
+
+    ul, li, ol {
+        list-style: none;
+    }
+
+    img {
+        border: 0 none;
+    }
+
+    body .rest {
+        font-size: 14px;
+        line-height: 1.5;
+        color: #212220;
+    }
+
+    strong, b {
+        font-weight: bold;
+    }
+
+    #head-navi {
+        position: relative;
+        z-index: 1000;
+        min-width: 1240px;
+        font-size: 14px;
+        line-height: 1.5;
+        font-family: 'NotoSans Light', 'Malgun Gothic', '맑은 고딕', 'Apple SD Gothic Neo', '돋움', dotum, sans-serif;
+        background-color: #f5f5f5;
+        text-align: left;
+    }
+
+    #head-navi .inner-head {
+        position: relative;
+        width: 1220px;
+        margin: 0 auto;
+    }
+
+    #head-navi .logo {
+        float: left;
+        margin: 25px 0 26px 0;
+    }
+
+    #head-navi .img-ggb {
+        display: inline-block;
+        overflow: hidden;
+        font-size: 0;
+        line-height: 0;
+        background: url(https://t1.kakaocdn.net/gamepub/top/ggb_2018/img_ggb_190418.png) no-repeat;
+        vertical-align: top;
+        text-indent: -9999px;
+    }
+
+    #head-navi .ico-daum {
+        width: 43px;
+        height: 18px;
+        margin-top: 2px;
+        background-position: 0 0;
+    }
+
+    #head-navi .ico-service {
+        width: 37px;
+        height: 21px;
+        background-position: -47px 0;
+    }
+
+    #head-navi .ico-arr {
+        float: left;
+        width: 11px;
+        height: 6px;
+        margin: 28px 9px 0;
+        background-position: -50px -30px;
+    }
+
+    #head-navi .game-block {
+        float: left;
+        padding-left: 43px;
+    }
+
+    #head-navi .game-menu {
+        float: left;
+    }
+
+    #head-navi .game-menu > li + li {
+        margin-left: 26px;
+    }
+
+    #head-navi .game-menu > li {
+        float: left;
+    }
+
+    #head-navi .game-menu .link-ggb {
+        display: block;
+        padding: 27px 15px;
+        font-weight: bold;
+        font-size: 15px;
+        line-height: 18px;
+        text-decoration: none;
+        color: #212220;
+    }
+
+
+
+    #head-navi .game-menu .color {
+        color: #f9930e;
+    }
+
+    #head-navi .game-menu .ico-new {
+        width: 32px;
+        height: 13px;
+        margin: 3px -36px 0 4px;
+        background-position: -90px -120px;
+    }
+    #head-navi .game-menu .game-sub {
+    display: none;
+    background-color:white;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    top: 72px;
+    width: 100%;
+    height: 439px;
+    padding-top: 16px;
+}
+
+    #head-navi .game-menu .group-sort {
+    float: left;
+    width: 150px;
+}
+    #head-navi .box-sort {
+    position: relative;
+}
+    #head-navi .box-sort+.box-sort {
+    margin-top: 24px;
+}
+    #head-navi .game-menu .group-sort+.group-sort {
+    margin-left: 53px;
+}
+    #head-navi .box-sort .tit-game {
+    display: block;
+    font-size: 14px;
+    line-height: 20px;
+    color: #212220;
+}
+    #head-navi .list-game {
+    margin-top: 7px;
+}
+    #head-navi .list-game {
+    margin-top: 7px;
+}
+    #head-navi .list-game .tag-new {
+    background-position: -90px -20px;
+    width: 32px;
+    height: 13px;
+    margin: 6px 0 0 5px;
+}
+
+    #head-navi .list-game .tag-cbt {
+    background-position: -50px -120px;
+    width: 32px;
+    height: 13px;
+    margin: 6px 0 0 5px;
+}
+    #head-navi .list-game .link-game {
+    font-size: 13px;
+    line-height: 22px;
+    color: #797979;
+    white-space: nowrap;
+}
+    #head-navi .list-game .link-game:hover{
+    text-decoration:underline;
+    }
+    #head-navi .game-bnr {
+        position: absolute;
+        top: 5px;
+        left: 448px;
+    }
+
+    #head-navi .game-bnr .btn-bnr {
+        display: block;
+        overflow: hidden;
+    }
+
+    .img_thumb, .img-thumb {
+        vertical-align: top;
+
+    }
+
+    #head-navi .game-bnr .btn-bnr .img-thumb {
+        float: left;
+        width: 284px;
+        height: 62px;
+    }
+
+    #head-navi .panel-bnr {
+        display: none;
+        overflow: hidden;
+        position: absolute;
+        top: 59px;
+        left: 50%;
+        z-index: 10;
+        margin-left: -304px;
+        border-radius: 30px;
+        box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.35);
+    }
+
+    #head-navi .panel-bnr .img-thumb {
+        width: 580px;
+        height: 222px;
+    }
+
+    #head-navi .user {
+        float: right;
+        width: 400px;
+        padding-top: 16px;
+        text-align: right;
+    }
+
+    #head-navi .user .txt-greet {
+        display: inline-block;
+        margin-top: -3px;
+        padding-right: 9px;
+        font-size: 13px;
+        line-height: 16px;
+        color: #767575;
+        letter-spacing: -0.03em;
+        vertical-align: middle;
+    }
+
+    #head-navi .btn-login {
+        display: inline-block;
+        width: 152px;
+        height: 38px;
+        border: 1px solid #f9930e;
+        font-weight: bold;
+        font-size: 13px;
+        line-height: 38px;
+        color: #f9930e;
+        text-align: center;
+        vertical-align: middle;
+    }
+
+    #head-navi .btn-login:hover {
+        border-color: #ffc501;
+        color: #212220;
+        text-decoration: none;
+        background-color: #ffc501;
+    }
+
+    #head-navi .ico-login {
+        width: 14px;
+        height: 15px;
+        margin: 11px 7px 0 -2px;
+        background-position: -130px 0;
+    }
+
+
+
+    #head-navi .btn-login .txt-login {
+        width: 89px;
+        height: 13px;
+        margin-top: 13px;
+        background-position: 0 -80px;
+    }
+
+    #head-navi .btn-login:hover .txt-login {
+        background-position: 0 -100px;
+    }
+
+    #head-navi .btn-login:hover .ico-login {
+        background-position: -130px -20px;
+    }
+
+    .section_promo {
+        overflow: hidden;
+        width: 1220px;
+        margin: 0 auto;
+        padding-bottom: 20px;
+    }
+
+    .slide_promo {
+        overflow: hidden;
+        float: left;
+        position: relative;
+        width: 792px;
+        height: 512px;
+    }
+
+    .slide_promo .nav_promo {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: 10;
+        width: 100%;
+        height: 60px;
+    }
+
+    .slide_promo .btn_prev {
+        left: 0;
+        background-position: -350px -50px;
+        position: absolute;
+        bottom: 0;
+        z-index: 10;
+        width: 57px;
+        height: 60px;
+        background-color: rgba(0, 0, 0, 0.85);
+    }
+
+    .img_top {
+        display: inline-block;
+        overflow: hidden;
+        font-size: 0;
+        line-height: 0;
+        background: url(https://t1.kakaocdn.net/gamepub/top/2018/img_top_181217.png) no-repeat;
+        vertical-align: top;
+        text-indent: -9999px;
+    }
+
+    .slide_promo .ico_prev {
+        width: 11px;
+        height: 19px;
+        margin: 21px 0 0 23px;
+        background-position: -100px -110px;
+    }
+
+    .slide_promo .btn_next {
+        right: 0;
+        border-left: 1px solid #534c4c;
+        position: absolute;
+        bottom: 0;
+        z-index: 10;
+        width: 57px;
+        height: 60px;
+        background-color: rgba(0, 0, 0, 0.85);
+    }
+
+    .slide_promo .ico_next {
+        width: 11px;
+        height: 19px;
+        margin: 21px 0 0 23px;
+        background-position: -120px -110px;
+    }
+
+    .paging_promo {
+        overflow: hidden;
+        position: relative;
+        width: 677px;
+        height: 65px;
+        margin: -5px 57px 0;
+    }
+
+    .paging_promo .list_paging {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .paging_promo .list_paging li {
+        float: left;
+    }
+
+    .paging_promo .on .link_paging {
+        background-color: #ffc501;
+        color: #212220;
+        filter: none;
+    }
+
+    .paging_promo .link_paging:hover, .paging_promo .link_paging:focus, .paging_promo .on .link-paging {
+        background-color: #ffc501;
+        color: #212220;
+        filter: none;
+    }
+
+    .paging_promo .link_paging {
+        display: block;
+        position: relative;
+        width: 225px;
+        height: 60px;
+        margin-top: 5px;
+        font-weight: bold;
+        line-height: 57px;
+        border-left: 1px solid #534c4c;
+        background-color: rgba(0, 0, 0, 0.85);
+        color: #acaea9;
+        letter-spacing: -0.05em;
+        text-align: center;
+        text-decoration: none;
+    }
+
+    .list_promo {
+        overflow: hidden;
+        z-index: 0;
+        width: 792px;
+        height: 512px;
+    }
+
+    .list_promo .img_thumb {
+        width: 792px;
+        height: 512px;
+    }
+
+    .img_thumb, .img-thumb {
+        vertical-align: top;
+    }
+
+    .section_promo .link_bnr {
+        display: block;
+    }
+
+    .section_promo .link_bnr + .link_bnr {
+        margin-top: 20px;
+    }
+
+    .section_promo .bnr_promo .img_thumb {
+        width: 408px;
+        height: 246px;
+    }
+
+    .section_promo .bnr_promo {
+        float: right;
+    }
+
+    .box_bigbnr {
+        margin-top: 32px;
+    }
+
+    .box_bigbnr .link_bnr {
+        display: block;
+        width: 1220px;
+        margin: 0 auto;
+    }
+
+    .box_bigbnr .img_thumb {
+        width: 1220px;
+        height: 192px;
+    }
+
+    .game-category {
+        width: 1240px;
+        margin: 0 auto;
+    }
+
+    .game-category .color {
+        color: #ffba01;
+    }
+
+    .tab_game {
+        overflow: hidden;
+        position: relative;
+        margin: 62px 10px 28px;
+    }
+
+    .tab_game .bar_tab {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 122px;
+        height: 5px;
+        background-color: #ffba01;
+    }
+
+    .tab_game li {
+        float: left;
+        text-align: center;
+        border-bottom: 1px solid #dfdedd;
+    }
+    .tab_game [class*="link_"] {
+    display: block;
+    width: 122px;
+    height: 45px;
+    overflow: hidden;
+    font-size: 0;
+    line-height: 0;
+    background: url(https://t1.kakaocdn.net/gamepub/top/2018/tab_game.png) no-repeat;
+    text-indent: -9999px;
+    }
+
+    .tab_game .on .link_tab1 {
+        background-position: 0 -50px;
+    }
+
+    .tab_game .link_tab2 {
+        background-position: -122px 0;
+
+    }
+
+    .tab_game .link_tab3 {
+        background-position: -244px 0;
+
+    }
+
+    .tab_game .link_tab4 {
+        background-position: -366px 0;
+
+    }
+
+    .tab_game .link_tab5 {
+        background-position: -488px 0;
+
+    }
+
+    .tab_game .link_tab6 {
+        background-position: -610px 0;
+    }
+
+    .tab_game .link_tab7 {
+        background-position: -732px 0;
+
+    }
+
+    .tab_game .link_tab8 {
+        background-position: -854px 0;
+
+    }
+
+    .tab_game .link_tab9 {
+        background-position: -976px 0;
+
+    }
+
+    .tab_game .link_tab10 {
+        background-position: -1098px 0;
+
+    }
+
+    .game-category .panel_game {
+        display: none;
+        position: relative;
+        margin: 0;
+        padding: 0;
+    }
+
+    .game-category .panel_game .mobile-game {
+        float: right;
+        width: 310px;
+    }
+
+    .sorting {
+        overflow: hidden;
+    }
+
+    .sorting li {
+        float: left;
+        padding: 10px;
+    }
+
+    ul.sorting.m_game_type {
+        display: block;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+    }
+
+    .sorting .type_game {
+        display: block;
+        margin: 3px 0 0 1px;
+        font-size: 13px;
+        line-height: 16px;
+        color: #717370;
+    }
+
+    .sorting .link_game {
+        display: block;
+        overflow: hidden;
+        position: relative;
+        width: 228px;
+        height: 146px;
+        background-color: #fff;
+    }
+
+    .m_game_type .link_game {
+        width: 290px;
+        height: 160px;
+    }
+
+    .m_game_type .frame_game {
+        padding-top: 19px;
+    }
+
+    .m_game_type .img_thumb {
+        width: 290px;
+        margin-top: 0;
+        margin-right: -145px;
+    }
+
+    .m_game_type .type_game {
+        margin-top: 1px;
+    }
+
+    .sorting .frame_game {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding: 16px 0 0 23px;
+    }
+
+    .sorting .item_recomm .ico_pc {
+        background-position: -100px -30px;
+        margin: 3px 0 0 9px;
+    }
+
+    .sorting .ico_pc {
+        width: 38px;
+        height: 20px;
+        background-position: -140px -30px;
+        margin: 3px 0 0 9px;
+    }
+
+    .sorting .tit_game {
+        display: block;
+        font-size: 17px;
+        line-height: 21px;
+        letter-spacing: -0.05em;
+    }
+
+    .sorting .ico_m {
+        width: 58px;
+        height: 20px;
+        background-position: -180px -30px;
+        margin: 3px 0 0 9px;
+    }
+
+    .sorting .img_thumb {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 290px;
+        margin-top: 3px;
+        transform: translate3d(-50%, -50%, 0) scale(1);
+        transform-origin: 50% 50%;
+        transition: all .3s ease;
+    }
+
+    .game-category .panel_game .pc-game {
+        overflow: hidden;
+        padding: 0;
+    }
+
+    .sorting .item_recomm .tit_game {
+        color: #fff;
+    }
+
+    .sorting .img_thumb {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+    }
+
+    .part_etc {
+        display: block;
+        width: 1240px;
+        margin-top: 70px;
+        background-color: #e4e4e4;
+    }
+
+    .part_etc .inner_etc {
+        overflow: hidden;
+        width: 1220px;
+        margin: 0 auto;
+    }
+
+    .notice_part {
+        float: left;
+        padding: 41px 0;
+    }
+
+    .notice_part .tit_noti {
+        float: left;
+    }
+
+    .notice_part .link_tit {
+        display: block;
+        text-decoration: none;
+    }
+
+    .notice_part .ico_noti {
+        width: 42px;
+        height: 30px;
+        margin: 7px 0 0 1px;
+        background-position: -410px -50px;
+    }
+
+    .notice_part .txt_noti {
+        width: 78px;
+        height: 22px;
+        margin: 11px 0 0 18px;
+        background-position: -410px -20px;
+    }
+
+    .notice_part .nav_noti {
+        float: left;
+        margin-left: 23px;
+        margin-top: 18px;
+    }
+
+    .notice_part .btn_prev {
+        background-position: 0 -100px;
+        display: block;
+        width: 19px;
+        height: 19px;
+    }
+
+    .notice_part .btn_next {
+        margin-top: 5px;
+        background-position: -20px -100px;
+        display: block;
+        width: 19px;
+        height: 19px;
+    }
+
+    .list_noti {
+        width: 350px;
+        height: 36px;
+        margin: 2px 0 0 31px;
+    }
+
+    .list_noti > li {
+        overflow: hidden;
+        margin-top: 45px
+    }
+
+    .list_noti .link_noti {
+        display: block;
+        overflow: hidden;
+        line-height: 36px;
+        color: #666;
+    }
+
+    .slide_noti {
+        float: left;
+    }
+
+    .box-view {
+        width: 100%;
+        padding-top: 12px;
+        overflow: hidden;
+        position: relative;
+        height: 36px;
+    }
+
+    .notice_link {
+        float: right;
+        padding: 58px 0;
+    }
+
+    .notice_link .link_reserve {
+        display: inline-block;
+        vertical-align: top;
+        text-decoration: none;
+    }
+
+    .notice_link .ico_reserve {
+        width: 26px;
+        height: 30px;
+        margin-top: 3px;
+        background-position: -230px -60px;
+    }
+
+    .notice_link .txt_reserve {
+        width: 55px;
+        height: 15px;
+        margin: 10px 0 0 12px;
+        background-position: -350px -70px;
+    }
+
+    .notice_link .ico_arr {
+        margin: 12px 0 0 11px;
+    }
+
+    .img_top.ico_arr {
+        width: 6px;
+        height: 12px;
+        background-position: -90px -110px;
+    }
+
+    .notice_link .link_coupon {
+        margin-left: 45px;
+        display: inline-block;
+        vertical-align: top;
+        text-decoration: none;
+    }
+
+    .notice_link .ico_coupon {
+        width: 37px;
+        height: 22px;
+        margin: 7px 0 6px;
+        background-position: -260px -60px;
+    }
+
+    .notice_link .txt_coupon {
+        width: 87px;
+        height: 16px;
+        margin: 10px 0 0 11px;
+        background-position: -300px 0;
+    }
+
+    .notice_link .link_time {
+        margin-left: 43px;
+        display: inline-block;
+        vertical-align: top;
+        text-decoration: none;
+    }
+
+    .notice_link .ico_time {
+        width: 34px;
+        height: 31px;
+        margin-top: 2px;
+        background-position: -190px -60px;
+    }
+
+    .notice_link .txt_time {
+        width: 101px;
+        height: 15px;
+        margin: 10px 0 0 10px;
+        background-position: -390px 0;
+    }
+
+    .footer {
+        overflow: hidden;
+        width: 1220px;
+        margin: 0 auto;
+        padding: 80px 0 84px;
+    }
+
+    .list_quick {
+        position: relative;
+        margin-bottom: 24px;
+        padding-bottom: 15px;
+        border-bottom: 1px solid #dfdedd;
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+    .list_quick .link_txt {
+        font-weight: bold;
+    }
+
+    .list_quick .txt_bar {
+        padding: 0 6px;
+        font-size: 13px;
+        line-height: 22px;
+        color: #d0d0d0;
+    }
+
+    .list_quick .emph_quick {
+        color: #f9930e;
+    }
+
+    .list_quick .link_pcroom {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    .footer .foot_logo {
+        float: left;
+        padding-right: 68px;
+    }
+
+    .footer .logo_pcroom {
+        width: 154px;
+        height: 19px;
+        margin: 3px 0;
+        background-position: -250px -20px;
+    }
+
+    .footer .link_games {
+        display: block;
+    }
+
+    .footer .logo_games {
+        width: 176px;
+        height: 32px;
+        background-position: -150px -100px;
+    }
+
+    .footer .foot_info {
+        float: left;
+    }
+
+    .footer .txt_info {
+        margin-bottom: 18px;
+        font-size: 13px;
+        line-height: 22px;
+        color: #999;
+        letter-spacing: -0.03em;
+    }
+
+    .footer .info_company {
+        overflow: hidden;
+        font-size: 13px;
+        line-height: 22px;
+        color: #666;
+        letter-spacing: -0.03em;
+    }
+
+    .footer .info_company .link_txt {
+        color: #666;
+        text-decoration: underline;
+    }
+
+    .footer .txt_copy {
+        display: block;
+        margin-top: 22px;
+        color: #909090;
+        letter-spacing: .02em;
+    }
+
+    .footer .link_copy {
+        color: #909090;
+    }
+    :focus {
+    outline: -webkit-focus-ring-color auto 5px;
+}
+
+
+</style>
